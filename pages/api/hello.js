@@ -1,6 +1,12 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
 export default (req, res) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+
   let data = [];
   fetch(
     `https://sandbox-api.brewerydb.com/v2/beers/?key=${breweryDBKey}&p=${req.query.page}`
