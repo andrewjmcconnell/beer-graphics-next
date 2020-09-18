@@ -1,0 +1,9 @@
+.window {
+  display: flex;
+  flex-direction: row;
+}
+
+.description {
+  vertical-align: top;
+  padding: 16px;
+}
