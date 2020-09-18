@@ -118,8 +118,19 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
+        <title>Beer Graphics - Andrew McConnell</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta property="og:title" content="Andrew J McConnell" />
+        <meta property="og:description" content="Frontend Engineer" />
+        <meta
+          property="og:image"
+          content="https://scontent-ort2-2.xx.fbcdn.net/v/t1.0-9/65228454_10157762281949026_3432995470253752320_n.jpg?_nc_cat=109&_nc_sid=85a577&_nc_ohc=mxu58qOA9RQAX9oNWLg&_nc_ht=scontent-ort2-2.xx&oh=cd79ad4f691cea7ecfafe36c2d50d187&oe=5E982A7E"
+        />
+        <meta property="og:url" content="https://andrewjmcconnell.com" />
+        <meta
+          name="twitter:card"
+          content="https://scontent-ort2-2.xx.fbcdn.net/v/t1.0-9/65228454_10157762281949026_3432995470253752320_n.jpg?_nc_cat=109&_nc_sid=85a577&_nc_ohc=mxu58qOA9RQAX9oNWLg&_nc_ht=scontent-ort2-2.xx&oh=cd79ad4f691cea7ecfafe36c2d50d187&oe=5E982A7E"
+        />
       </Head>
 
       <div className={styles.window}>
