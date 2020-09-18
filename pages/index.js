@@ -23,7 +23,7 @@ export default function Home() {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`/api?page=${page}`)
+    fetch(`/api/beers/${page}`)
       .then(res => res.json())
       .then(res => {
         setLoading(false);
