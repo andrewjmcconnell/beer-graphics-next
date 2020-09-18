@@ -7,7 +7,7 @@ import {
   getCategory,
   checkAvailability,
   renderFlowers
-} from "./utils";
+} from "../src/utils";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
