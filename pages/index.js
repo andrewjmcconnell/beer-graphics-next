@@ -23,7 +23,7 @@ export default function Home() {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`http://localhost:4000/?page=${page}`)
+    fetch(`/api?page=${page}`)
       .then(res => res.json())
       .then(res => {
         setLoading(false);
