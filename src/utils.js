@@ -68,7 +68,7 @@ export const renderFlowers = beers => {
   const petalScale = d3.scaleOrdinal().range(petalPaths);
 
   const sizeScale = d3
-    .scaleOrdinal()
+    .scaleLinear()
     .domain(d3.extent(beers, beer => beer.abv))
     .range([0.1, 0.6])
     .unknown(0.35);

@@ -16,8 +16,8 @@ export default (req, res) => {
         beers.data.map(beer =>
           data.push({
             name: beer.name,
-            abv: beer.abv,
-            ibu: beer.ibu,
+            abv: beer.abv ? parseFloat(beer.abv) : null,
+            ibu: beer.ibu ? parseFloat(beer.ibu) : null,
             category: beer.style ? beer.style.categoryId : null,
             available: beer.availableId
               ? beer.availableId

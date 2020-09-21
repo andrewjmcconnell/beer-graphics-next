@@ -1,9 +1,16 @@
 .window {
   display: flex;
   flex-direction: row;
+  padding: 16px 16px 0;
 }
 
 .description {
   vertical-align: top;
   padding: 16px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }

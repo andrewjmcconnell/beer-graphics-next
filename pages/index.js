@@ -85,10 +85,11 @@ export default function Home() {
       g.transition()
         .duration(1000)
         .attr("opacity", 1)
-        .attr("transform", (d, i) => `translate(${d.translate})`);
+        .attr("transform", (d, _) => `translate(${d.translate})`);
 
       // e.path[1].__data__ = data of the selected group
       g.on("mouseover", e => setSelecteed(e.path[1].__data__));
+      g.on("touchstart", e => setSelecteed(e.path[1].__data__));
 
       g.selectAll("path")
         .data(d =>
@@ -163,18 +164,20 @@ export default function Home() {
           <div>Availability: {checkAvailability(selected.available)}</div>
         </div>
       </div>
-      <div>
-        {page > 1 && (
-          <button onClick={() => setPage(page - 1)}>{page - 1}</button>
-        )}
-        <button>{page}</button>
-        {page < numPages && (
-          <button onClick={() => setPage(page + 1)}>{page + 1}</button>
-        )}
-      </div>
-      <div>
-        <input value={page} onChange={e => setPage(Number(e.target.value))} />
-        <span> / {numPages}</span>
+      <div className={styles.pagination}>
+        <div>
+          {page > 1 && (
+            <button onClick={() => setPage(page - 1)}>{page - 1}</button>
+          )}
+          <button>{page}</button>
+          {page < numPages && (
+            <button onClick={() => setPage(page + 1)}>{page + 1}</button>
+          )}
+        </div>
+        <div>
+          <input value={page} onChange={e => setPage(Number(e.target.value))} />
+          <span> / {numPages}</span>
+        </div>
       </div>
     </div>
   );
